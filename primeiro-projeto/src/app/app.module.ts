@@ -8,6 +8,7 @@ import { DataBidingComponent } from './data-biding/data-biding.component';
 import { FormsModule } from '@angular/forms';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
 import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atributos.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,8 @@ import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atr
     DiretivasEstruturaisComponent,
     DiretivasAtributosComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
-  bootstrap: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
+  providers: [], //declaramos os services aqui para requisições externas
+  bootstrap: [AppComponent], //serve para informar o componente principal da aplicação, o componente Pai do app
 })
 export class AppModule {}
