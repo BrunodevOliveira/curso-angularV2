@@ -1,0 +1,35 @@
+
+<section>
+  <h1>Interpolation</h1>
+  <p>Podemos compara valores ou fazer operações aritméticas:</p>
+  <p>
+    {{name}}
+  </p>
+  <p>{{name}} tem mais de 30 anos?</p>
+  <p>{{age > 30}}</p>
+
+  <p>Quanto é {{age}} + 1?</p>
+  <p>{{age + 1}}</p>
+</section>
+
+<section>
+  <h1>Property Binding</h1>
+  <p>Podemos atribui valores do JS a propriedades do HTML</p>
+  <button [disabled]="checkedDisabled">Button</button>
+  <img [src]="imgSrc" [title]="imgTitle">
+</section>
+
+<section>
+  <h1>Event Binding</h1>
+  <p>Podemos criar eventos que serão executados a partir de uma interação do usuário na UI</p>
+  <button (click)="alertaInfo($event)">Eventos</button>
+  <div (mousemove)="mouseMoveTeste($event)" style="background: red; width: 100px; height: 100px">
+    {{position.x}} - {{position.y}}
+  </div>
+</section>
+
+<section>
+  <h1>Two-way binding</h1>
+  <input type="text" [(ngModel)]="name">
+  <p>{{name}}</p>
+</section>
