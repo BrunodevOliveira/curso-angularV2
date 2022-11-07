@@ -1,0 +1,42 @@
+<section>
+  <h1>Diretiva estrutural *ngIf</h1>
+  <p *ngIf="condition; else elseBlock">Exibido quando a condicional for verdadeira</p>
+  <ng-template #elseBlock>
+    <p>Exibido quando a condicional for falsa</p>
+  </ng-template>
+
+  <p *ngIf="conditionClick">True</p>
+  <p *ngIf="!conditionClick">False</p>
+  <button (click)="onClick()">Clicar</button>
+</section>
+
+<section>
+  <h1>Diretiva estrutural *ngFor</h1>
+  <p>É possível obter o primeiro e último item do array e também se o indíce é par(even) ou impar(odd) </p>
+  <ul>
+    <li *ngFor="let item of list; let i = index" (click)="onClickEventList(i)">
+      [{{i + 1}}] {{item.name}}
+    </li>
+  </ul>
+  <button (click)="onClickAddList()">Adicionar pessoa</button>
+</section>
+
+<section>
+  <h1>Diretiva estrutural *ngSwitch</h1>
+
+  <p>Renderiza o parágrafo que possui o valor comparado no ngSwitch</p>
+
+  <input type="text" [(ngModel)]="name">
+
+  <div [ngSwitch]="name">
+    <p *ngSwitchCase="'bruno'">
+      Bruno
+    </p>
+    <p *ngSwitchCase="'barbara'">
+      Barbara
+    </p>
+    <p *ngSwitchDefault>
+      Nome não encontrado
+    </p>
+  </div>
+</section>

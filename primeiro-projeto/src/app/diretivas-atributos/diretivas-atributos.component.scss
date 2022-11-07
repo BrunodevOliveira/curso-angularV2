@@ -1,0 +1,18 @@
+section {
+  max-width: 380px;
+  margin: 1rem auto;
+  border: 3px solid lightpink;
+  padding: 1rem;
+
+  h1 {
+    text-align: center;
+  }
+
+  .active {
+    background: lightcoral;
+  }
+
+  .disabled {
+    background: lightblue;
+  }
+}

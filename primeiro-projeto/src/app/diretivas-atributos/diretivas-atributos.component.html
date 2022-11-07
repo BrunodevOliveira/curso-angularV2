@@ -1,0 +1,52 @@
+<section>
+  <h1>Diretiva de atributo ngClass</h1>
+  <p [ngClass]="{ active: valor, disabled: !valor }">NgClass</p>
+</section>
+
+<section>
+  <h1>Diretiva de atributo ngStyle</h1>
+  <p [ngStyle]="{ fontSize: height }">NgClass</p>
+</section>
+
+<section>
+  <h1>Diretiva de atributo ngModel</h1>
+  <p>adicionam vinculação bidirecional a um elemento de formulário HTML</p>
+  <p>Para utillizar essa diretiva precisamos importar o FormsModule</p>
+
+  <input type="text" [(ngModel)]="name" /> {{ name }}
+  <button (click)="save()">Salvar</button>
+  <li *ngFor="let item of list">{{ item.name }}</li>
+</section>
+
+<section>
+  <h1>Elemento HTML ng-template</h1>
+
+  <p>
+    ng-template é o fragment do Angular, cria uma tag limpa que encapsula os dados a serem
+    verificados e gera mais desempenho
+  </p>
+
+  <input type="text" [(ngModel)]="name" /> {{ name }}
+  <button (click)="save()">Salvar</button>
+
+  <ng-template ngFor let-item [ngForOf]="list">
+    <p>{{item.name}}</p>
+  </ng-template>
+</section>
+
+<section>
+  <ng-content select="hr"></ng-content>
+  <h1>ng-content</h1>
+  <p>Posso manipular onde os childrens do componente serão exibidos</p>
+  <ng-content select="h3"></ng-content>
+</section>
+
+<section>
+  <h1>Pipes</h1>
+  <p>São funções simples que transformam valores</p>
+  <input type="text" [(ngModel)]="name" />
+  <button (click)="save()">Formatar para maiúsculo</button>
+  <li *ngFor="let item of list">{{ item.name | uppercase}}</li>
+  <hr />
+  {{date | date: 'dd/mm/yyyy'}}
+</section>
