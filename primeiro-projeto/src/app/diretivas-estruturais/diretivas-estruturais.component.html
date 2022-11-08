@@ -1,6 +1,7 @@
 <section>
   <h1>Diretiva estrutural *ngIf</h1>
   <p *ngIf="condition; else elseBlock">Exibido quando a condicional for verdadeira</p>
+  <p>Se quisermos utilizar em uma tag ng-template a sintaxe muda para: [ngIf] </p>
   <ng-template #elseBlock>
     <p>Exibido quando a condicional for falsa</p>
   </ng-template>
