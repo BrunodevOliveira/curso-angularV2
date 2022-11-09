@@ -1,0 +1,12 @@
+<section>
+  <h1>Services</h1>
+
+  <ul>
+    <li *ngFor="let item of foodList">
+      [{{item.id}}] -
+      <input type="text" [(ngModel)]="item.name" (keyup.enter)="foodListEdit(item.id, item.name)">
+      <button (click)="foodListDelete(item.id)">Apagar</button>
+    </li>
+  </ul>
+</section>
+

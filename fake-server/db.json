@@ -1,0 +1,28 @@
+{
+  "list-food": [
+    {
+      "id": 1,
+      "name": "x Bacon"
+    },
+    {
+      "id": 4,
+      "name": "Pizza"
+    },
+    {
+      "id": 5,
+      "name": "Lasanha"
+    },
+    {
+      "id": 6,
+      "name": "Coxinha"
+    },
+    {
+      "name": "Torta",
+      "id": 8
+    },
+    {
+      "name": "Inhoque à Bolonhesa",
+      "id": 9
+    }
+  ]
+}
