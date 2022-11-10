@@ -1,0 +1,72 @@
+<section>
+  <h1>Forms</h1>
+  <p>
+    #ref => a partir do template ref utilizo o ngForm, isso faz com que a variável criada pelo
+    template ref armazene os dados do formulário. A partir do atributo name do input o ngModel irá
+    criar uma variável com o nome desse atributo e guardar o valor digitado no input nela
+  </p>
+  <form #form="ngForm" (ngSubmit)="submitForm(form)">
+    <label>
+      Nome:
+
+      <input type="text" name="nome" #nome="ngModel" [ngModel]="nome.value" required />
+      <span *ngIf="!nome.valid && (nome.dirty && nome.touched)">Invalid: Adicione um nome por favor! </span>
+    </label>
+
+    <p>Status do formulário: {{ form.valid }}</p>
+    <p>Status do input nome: {{ nome.valid }}</p>
+    <p>
+      Status do input nome caso tenha sido digitado algo: {{ nome.dirty }}
+      <!--Quando mudamos de false para true-->
+    </p>
+    <p>
+      Status do input nome caso tenha sido digitado algo: {{ nome.touched }}
+      <!--informa que o usuário clicou no form-->
+    </p>
+
+    <label>
+      Masculino:
+
+      <input type="radio" name="sexo" value="Masculino" ngModel />
+    </label>
+
+    <label>
+      Feminino
+
+      <input type="radio" name="sexo" value="Feminino" ngModel />
+    </label>
+
+    <label>
+      Outros:
+
+      <input type="radio" name="sexo" value="Outros" ngModel />
+    </label>
+
+    <label>
+      Angular:
+
+      <input type="checkbox" name="angular" ngModel />
+    </label>
+    <label>
+      Vue:
+
+      <input type="checkbox" name="vue" ngModel />
+    </label>
+
+    <label>
+      React:
+
+      <input type="checkbox" name="react" ngModel />
+    </label>
+
+    <select name="comidas" ngModel>
+      <option value="">Selecione um alimento</option>
+      <option *ngFor="let item of listFoods" [ngValue]="item">
+        {{ item.food }} - {{ item.preco }}
+      </option>
+      <!-- [ngValue]="item" => caso queira passa o objeto inteiro ao invés do valor -->
+    </select><br>
+    <button [disabled]="form.invalid">Enviar dados</button>
+  </form>
+  {{ form.value | json }}
+</section>

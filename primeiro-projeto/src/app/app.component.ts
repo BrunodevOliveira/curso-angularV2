@@ -20,6 +20,7 @@ import { Component, OnInit } from '@angular/core';
     <app-output (enviarDados)="setDados($event)"></app-output>
     <app-food-add></app-food-add>
     <app-food-list></app-food-list>
+    <app-forms></app-forms>
     <router-outlet></router-outlet>
   `,
 })
