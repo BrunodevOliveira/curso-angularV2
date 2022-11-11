@@ -1,0 +1,46 @@
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a
+          routerLink="/"
+          [routerLinkActive]="['active', 'outraClasse']"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+        <!--  [routerLinkActiveOptions]="{exact: true}" -> faz com que o Angular pegue a rota exata clicada, assim evita de duas ficarem marcadas -->
+      </li>
+      <li>
+        <a
+          routerLink="/sobre"
+          [routerLinkActive]="['active', 'outraClasse']"
+
+        >
+          Sobre
+          <!-- Não utilizo routerLinkActiveOptions pois quero que fique marcado todas as rotas filhas, feitas com parâmetros dinâmicos -->
+          </a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/dashboard"
+          [routerLinkActive]="['active', 'outraClasse']"
+
+        >
+          Dashboard
+          <!-- Não utilizo routerLinkActiveOptions pois quero que fique marcado todas as rotas filhas, feitas com parâmetros dinâmicos -->
+          </a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="['/404']"
+          [routerLinkActive]="['active', 'outraClasse']"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Error</a
+        >
+        <!-- Passando a página dentro de um array ['/404', 1] ele irá carregar uma URL parametriza, por exemplo, meusite/404/1 -->
+      </li>
+    </ul>
+  </nav>
+</header>
