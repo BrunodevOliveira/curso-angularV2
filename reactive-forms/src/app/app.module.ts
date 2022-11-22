@@ -5,9 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { TypedFormsComponent } from './typed-forms/typed-forms/typed-forms.component';
 
 @NgModule({
-  declarations: [AppComponent, ReactiveFormsComponent],
+  declarations: [AppComponent, ReactiveFormsComponent, TypedFormsComponent],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
