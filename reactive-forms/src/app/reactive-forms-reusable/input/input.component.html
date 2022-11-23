@@ -1,0 +1,19 @@
+<div class="form-control">
+  <label [for]="inputId">{{ label }}</label>
+  <input
+    [class.invalid]="control.invalid && control.dirty && control.touched"
+    [formControl]="control"
+    type="text"
+    [id]="inputId"
+  />
+
+  <div *ngFor="let err of control.errors | keyvalue">
+    {{ errorMessages[err.value] }}
+  </div>
+  <p>{{control.errors | json}}</p>
+  <ng-container *ngIf="control.invalid && control.dirty && control.touched">
+    <div *ngFor="let err of control.errors | keyvalue">
+      {{ errorMessages[err.value] }}
+    </div>
+  </ng-container>
+</div>
