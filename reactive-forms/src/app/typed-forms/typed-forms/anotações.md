@@ -16,5 +16,5 @@ Classe que substitui o FormArray depois da migração
 
 # NonNulableFormBuilder
 
-possui as mesmas classes que FormBuolder, porem com essa já indicamos por padrão o valor de `nonnulable`
+possui as mesmas classes que FormBuilder, porem com essa já indicamos por padrão o valor `true` para `nonnulable`
 Quando indicamos o nonNullable como `true` significa que o formulárioserá redefinido com o valor inicial e não como nulo

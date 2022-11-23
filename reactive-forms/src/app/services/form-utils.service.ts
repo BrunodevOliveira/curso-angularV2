@@ -7,6 +7,7 @@ import { ValidatorFn, FormControl, FormGroup } from '@angular/forms';
 export class FormUtilsService {
   constructor() {}
 
+  // Para formulários com NonNullable true
   makeNonNullableFormControl<T>(
     value: T,
     validator: ValidatorFn[]
@@ -17,12 +18,13 @@ export class FormUtilsService {
     });
   }
 
+  // para forms  nonNullable false
   makeFormControl<T>(value: T, validator: ValidatorFn): FormControl<T | null> {
     return new FormControl(value, validator);
   }
 }
 
-//~🔎 tipo que mapeia um modelo para um grupo de formulário estrito
+//~🔎 tipo que mapeia um modelo para um grupo de formulário
 export type ControlsOf<T extends Record<string, any>> = {
   [K in keyof T]: T[K] extends Record<any, any>
     ? FormGroup<ControlsOf<T[K]>>

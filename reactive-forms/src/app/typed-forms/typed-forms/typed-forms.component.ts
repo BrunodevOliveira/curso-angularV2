@@ -20,24 +20,24 @@ export class TypedFormsComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    formUtilsService: FormUtilsService
+    private formUtilsService: FormUtilsService
   ) {
     this.userForm = this.formBuilder.group({
       // name: new FormControl('Bruno', {
       //   validators: [Validators.required],
       //   nonNullable: true,
       // }),
-      name: formUtilsService.makeNonNullableFormControl('Bruno', [
+      name: formUtilsService.makeNonNullableFormControl('', [
         Validators.required,
       ]),
-      email: formUtilsService.makeNonNullableFormControl('Bruno@gmail.com', [
+      email: formUtilsService.makeNonNullableFormControl('', [
         Validators.required,
         Validators.email,
       ]),
-      age: formUtilsService.makeNonNullableFormControl(30, [
+      age: formUtilsService.makeNonNullableFormControl(0, [
         Validators.required,
       ]),
-      state: formUtilsService.makeNonNullableFormControl(true, [
+      state: formUtilsService.makeNonNullableFormControl(false, [
         Validators.required,
       ]),
     });
