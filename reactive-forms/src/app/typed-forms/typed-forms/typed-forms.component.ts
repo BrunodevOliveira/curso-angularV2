@@ -1,11 +1,6 @@
 import { UserData } from './../../classes/user-data';
 import { ControlsOf } from './../../services/form-utils.service';
-import {
-  FormGroup,
-  FormControl,
-  FormBuilder,
-  Validators,
-} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { FormUtilsService } from 'src/app/services/form-utils.service';
 import { IUserData } from 'src/app/models/user-data';
@@ -23,10 +18,6 @@ export class TypedFormsComponent implements OnInit {
     private formUtilsService: FormUtilsService
   ) {
     this.userForm = this.formBuilder.group({
-      // name: new FormControl('Bruno', {
-      //   validators: [Validators.required],
-      //   nonNullable: true,
-      // }),
       name: formUtilsService.makeNonNullableFormControl('', [
         Validators.required,
       ]),
