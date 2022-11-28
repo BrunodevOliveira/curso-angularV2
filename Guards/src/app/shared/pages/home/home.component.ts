@@ -5,7 +5,10 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <p>home works!</p>
     <a routerLink="account" [queryParams]="userData">Account</a> <br /><br />
-    <a routerLink="account" [queryParams]="{ account: 'admin', password: '123' }">Account False</a>
+    <a routerLink="account" [queryParams]="{ account: 'admin', password: '123' }">Account False</a
+    ><br /><br />
+    <a routerLink="core" [queryParams]="userData">Dashboard</a><br /><br />
+    <a routerLink="core/leads" [queryParams]="userData">Leads</a>
   `,
   styles: [],
 })

@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-account',
+  selector: 'app-dashboard',
   template: `
     <p>
-      account works!
+      dashboard works!
     </p>
   `,
   styles: [
   ]
 })
-export class AccountComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   constructor() { }
 
